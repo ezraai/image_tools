@@ -115,7 +115,9 @@ def _load_single_image(header, data, validation_file=None):
     dir_vec = np.concatenate((ndir1, ndir2, ndir3))
     image.SetDirection(dir_vec)
     image.SetMetaData('NRRD_space',NRRD_RAS_SPACE)
-
+    
+    print(header)
+    
     slicer_segmentations_metadata = header[u'keyvaluepairs']
     for item in slicer_segmentations_metadata:
         image.SetMetaData(item.encode('ascii','ignore'),
