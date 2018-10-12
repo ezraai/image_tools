@@ -125,8 +125,9 @@ def _load_single_image(header, data, validation_file=None):
         # In SimpleITK v 1.1.0 Slicer metadata is copied directly to the header dictionary
         print 'Warning: copying slicer metadata to image metadata directly. You updated SimpleITK!'
         for item in header:
-            image.SetMetaData(item.encode('ascii','ignore'),
-                              header[item].encode('ascii','ignore'))
+            if item.startswith('Segment'):
+                image.SetMetaData(item.encode('ascii','ignore'),
+                                  header[item].encode('ascii','ignore'))
 
     # if validation_file is not None:
     #     im = sitk.ReadImage(validation_file) #only for validation that we are capturing what we need
