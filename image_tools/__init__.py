@@ -1,3 +1,2 @@
-import _sitk as sitk
-from _sitk import load_images 
+from _sitk import load_image, load_images
 
