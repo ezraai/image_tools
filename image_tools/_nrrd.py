@@ -2,7 +2,7 @@ import nrrd
 import numpy as np
 import SimpleITK as sitk
 
-from image_tools.math import num_from_str_vec, trx_lps_to_ras
+from _math import num_from_str_vec, trx_lps_to_ras
 
 NRRD_SPACE_ORIGIN = u'space origin'
 NRRD_SPACE_DIRECTIONS = u'space directions'
