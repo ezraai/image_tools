@@ -123,7 +123,7 @@ def _load_single_image(header, data, validation_file=None):
                               slicer_segmentations_metadata[item].encode('ascii', 'ignore'))
     except KeyError:
         # In SimpleITK v 1.1.0 Slicer metadata is copied directly to the header dictionary
-        print 'Warning: copying slicer metadata to image metadata directly. You updated SimpleITK!'
+        # print 'Warning: copying slicer metadata to image metadata directly. You updated SimpleITK!'
         for item in header:
             if item.startswith('Segment'):
                 image.SetMetaData(item.encode('ascii','ignore'),
