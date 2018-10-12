@@ -1,1 +1,2 @@
-from image_tools._sitk import load_image, load_images
+import _sitk.load_image as load_image
+import _sitk.load_images as load_images
