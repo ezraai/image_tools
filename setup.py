@@ -11,7 +11,7 @@ from setuptools import find_packages, setup, Command
 # Package meta-data.
 NAME = 'nrrd_tools'
 DESCRIPTION = 'NRRD tools'
-URL = 'https://github.com/ezraai/bme_test'
+URL = 'https://github.com/ezraai/nrrd_tools'
 EMAIL = 'diego@ezra.ai'
 AUTHOR = 'Diego Cantor'
 REQUIRES_PYTHON = '>=2.7.0'
