@@ -1,8 +1,8 @@
 import numpy as np
 import SimpleITK as sitk
 
-import .math as math
-import .nrrd_tools
+import image_tools.math as math
+import image_tools.nrrd_tools as nrrd_tools
 
 SITK_NRRD_SPACE = 'NRRD_space'
 SITK_LPS_SPACE ='left-posterior-superior'
