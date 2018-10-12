@@ -116,13 +116,17 @@ def _load_single_image(header, data, validation_file=None):
     image.SetDirection(dir_vec)
     image.SetMetaData('NRRD_space',NRRD_RAS_SPACE)
     
-    for key in header.keys():
-        print key
-    
-    slicer_segmentations_metadata = header[u'keyvaluepairs']
-    for item in slicer_segmentations_metadata:
-        image.SetMetaData(item.encode('ascii','ignore'),
-                          slicer_segmentations_metadata[item].encode('ascii','ignore'))
+    try:
+        slicer_segmentations_metadata = header[u'keyvaluepairs']
+        for item in slicer_segmentations_metadata:
+            image.SetMetaData(item.encode('ascii', 'ignore'),
+                              slicer_segmentations_metadata[item].encode('ascii', 'ignore'))
+    except KeyError:
+        # In SimpleITK v 1.1.0 Slicer metadata is copied directly to the header dictionary
+        print 'Warning: copying slicer metadata to image metadata directly. You updated SimpleITK!'
+        for item in header:
+            image.SetMetaData(item.encode('ascii','ignore'),
+                              header[item].encode('ascii','ignore'))
 
     # if validation_file is not None:
     #     im = sitk.ReadImage(validation_file) #only for validation that we are capturing what we need
