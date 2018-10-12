@@ -9,8 +9,8 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'bme-test'
-DESCRIPTION = 'BME Test Code'
+NAME = 'nrrd_tools'
+DESCRIPTION = 'NRRD tools'
 URL = 'https://github.com/ezraai/bme_test'
 EMAIL = 'diego@ezra.ai'
 AUTHOR = 'Diego Cantor'
