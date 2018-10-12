@@ -9,9 +9,9 @@ from shutil import rmtree
 from setuptools import setup
 
 # Package meta-data.
-NAME = 'nrrd_tools'
-DESCRIPTION = 'NRRD tools'
-URL = 'https://github.com/ezraai/nrrd_tools'
+NAME = 'image_tools'
+DESCRIPTION = 'Image Tools'
+URL = 'https://github.com/ezraai/image_tools'
 EMAIL = 'diego@ezra.ai'
 AUTHOR = 'Diego Cantor'
 REQUIRES_PYTHON = '>=2.7.0'
@@ -48,7 +48,7 @@ setup(
     python_requires=REQUIRES_PYTHON,
     url=URL,
     # If your package is a single module, use this instead of 'packages':
-    packages=['nrrd_tools'],
+    packages=['image_tools'],
     install_requires=REQUIRED,
     extras_require=EXTRAS,
     include_package_data=True,
