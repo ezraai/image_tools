@@ -18,7 +18,7 @@ REQUIRES_PYTHON = '>=2.7.0'
 VERSION = '1.0'
 
 # What packages are required for this module to be executed?
-REQUIRED = ['numpy', 'pynrrd', 'SimpleITK', 'ipywidgets']
+REQUIRED = ['numpy', 'pynrrd', 'SimpleITK']
 EXTRAS = {}
 
 here = os.path.abspath(os.path.dirname(__file__))
